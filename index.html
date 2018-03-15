@@ -1,0 +1,1152 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+
+<!--
+	HTML with Open Graph attributes
+	<html class="no-js" lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+-->
+
+<head>
+
+	<meta charset="UTF-8">
+	
+	<title>FitLife</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="shortcut icon" href="img/favicon.png">
+
+	<!-- Add some of The Open Graph protocol -->
+		<!-- Open Graph meta tags -->
+	<!--
+	<meta content="Animations" property="og:title">
+	<meta content="website" property="og:type">
+	<meta content="http://des111gn.com/all-in-1/" property="og:url">
+	<meta content="" property="og:image">
+	<meta content="FitLife" property="og:site_name">
+	<meta content="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable [...]" property="og:description">
+	-->
+
+	<!--[if lt IE 9]-->
+	<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-firestore.js"></script>
+	<!-- Firebase connection -->
+	<script src="js/firebaseapp.js"></script>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+
+	<!-- Bootstrap Grid Framework -->
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+
+	<!-- Bootstrap select -->
+	<link rel="stylesheet" href="css/bootstrap-select.min.css" />
+
+	<!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Oswald:300,400' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+	
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- Animate css -->
+	<link rel="stylesheet" href="css/animate.min.css">
+
+	<!-- Owl Carousel Assets -->
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+
+    <!--Preaty Photo-->
+	<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css"/>
+
+	<!-- Select box -->
+	<link href="css/jquery.selectbox.css" type="text/css" rel="stylesheet" />
+
+	<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+	<link rel="stylesheet" type="text/css" href="css/settings.css" media="screen" />
+
+	<!-- Main CSS Style -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+
+</head>
+
+<body>
+
+<!-- Page preloader -->
+<div id="page-preloader">
+	<img src="img/logo.png" alt="FitLife" data-rjs="2">
+	<span class="spinner"></span>
+</div>
+
+	
+	<div id="wrap">
+
+		<!-- Top bar -->
+		<header>
+		
+			<nav class="navbar navbar-toggleable-md fixed-top navbar-light bg-faded">
+
+				<div id="search">
+					<div class="container-fluid">
+			
+						<div class="col-xl-12">
+							<i id="search-beack" class="fa fa-times float-xs-right cursor-pointer"></i>
+							<input class="placeholder float-left" type="search" placeholder="Search here and press enter...">
+						</div>
+
+					</div>
+				</div>
+			
+				<div class="top-bar">
+					<div class="container">
+						<div class="row">
+							<div class="col-xl-7 col-lg-6 col-md-7 col-sm-4 col-xs-12">
+							</div>
+
+							<div class="col-xl-5 col-lg-6 col-md-5 col-sm-8">
+								<ul class="list-inline">
+									<li class="list-inline-item login float-right" id="signin">
+										<a href="login.html"><i class="fa fa-sign-in"></i> Login / Register</a>
+									</li>
+									<li class="list-inline-item dropdown shop-card float-right" style="display:none;" id="loggedin" >
+									 	<a class="btn btn-secondary dropdown-toggle card-products" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<i class="fa fa-user"></i><b id = "userName"> </b>
+									 	</a>
+										<ul class="list-unstyled dropdown-menu dropdown-menu-right">
+											<li class="dropdown-item shop-card-products-description clearfix">
+												<p>
+													<a href="shop-1.html">
+														Dashboard
+													</a>
+												</p>
+											</li>
+									    	<li class="dropdown-item shop-card-products-description clearfix">
+												<p>
+													<a onclick="logout()">
+														Logout
+													</a>
+												</p>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+
+						</div> <!-- and row -->
+					</div>
+				</div> <!-- top-bar -->
+				<div class="menu-navbar">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-2">
+								<a class="navbar-brand page-scroll logo float-left" href="index.html">
+									<img src="img/logo.png" alt="Fitlosophy" data-rjs="2">
+								</a>
+							</div>
+							<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"></span>
+							</button>
+							  	
+							<div class="col-lg-10">
+								<div class="collapse navbar-collapse" id="navbarNavDropdown">
+								    <ul class="nav navbar-nav">
+										<!--  menu item Home -->
+										<li class="nav-item">
+											<a class="nav-link" href="index.html">Home</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="index.html">Fitness Plans</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="index.html">Diet Plans</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="index.html">Events</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="index.html">Stories</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" href="index.html">Contact Us</a>
+										</li>
+							    	</ul><!-- and nav navbar-nav -->
+								</div> <!-- and collapse navbar-collapse -->
+							</div>
+						</div> <!-- and row -->
+					</div> <!-- and container-fluid -->
+				</div> <!-- and menu-navbar -->
+			</nav> <!-- and navbar -->
+
+		</header> <!-- and header -->
+		
+		<div class="index-4">
+
+
+			<section class="team-of-prof-bg">
+				<div class="team-of-prof" id="team-of-prof">
+					<div class="container">
+						<div class="row">
+
+							<div class="seo-item col-md-2 col-sm-4 col-xs-4 col-xs-small">
+								<img alt="" src="img/features/seo-1.jpg">
+								<h5>01. Healthy food</h5>
+							</div>
+							<div class="seo-item col-md-2 col-sm-4 col-xs-4 col-xs-small">
+								<img alt="" src="img/features/seo-2.jpg">
+								<h5>02. Regular training</h5>
+							</div>
+							<div class="seo-item col-md-2 col-sm-4 col-xs-4 col-xs-small">
+								<img alt="" src="img/features/seo-3.jpg">
+								<h5>03. Proper planning</h5>
+							</div>
+							<div class="seo-main col-md-6 col-sm-12">
+								<img alt="" src="img/features/seo-main.png">
+								<img alt="" class="cloud hidden-xs hidden-sm" src="img/features/seo-cl-2.png">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Our service -->
+			<section>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="service-block">
+								<div class="service-ico service-ico-1 c-pointer">
+								<i class="icon-scale-border"></i>
+								</div>
+								<h3>Batch fitness training</h3>
+								<p>There are many variations of passages of Lorem 
+								Ipsum available, but the majority have suffered 
+								alteration.</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="service-block">
+								<div class="service-ico service-ico-2 c-pointer"><i class="icon-scale-border"></i></div>
+								<h3>Batch Aerobics</h3>
+								<p>Code are many variations of passages Lorem Ipsum 
+								available, but SEO majority have suffered alteration. 
+								</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="service-block">	
+								<div class="service-ico service-ico-3 c-pointer"><i class="icon-scale-border"></i></div>
+								<h3>Group playing sports</h3>
+								<p>Invest SEO are many variations of passages in Ipsum available, but the majority have suffered 
+								alteration.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- and Our service -->
+
+
+			<!-- Recent post -->
+			<section>
+				<div class="recent-post">
+					<div class="recent-post-header">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12">
+									<h2>Recent Posts <span>blog timeline</span></h2>
+								</div>
+							</div> <!-- and row -->
+						</div> <!-- and container -->
+					</div> <!-- and recent-post-header -->
+					<div class="recent-post-content">
+						<div class="container">
+							<div class="row">
+
+								<div id="owl-demo-3" class="owl-carousel col-xs-small cursor-move">
+								    
+								    <div class="recent-post-item">
+								    	<div class="recent-post-item-header">
+											<h2 class="recent-post-date">
+												01<sup>May</sup>
+												<sub>2017</sub>
+											</h2>
+										</div>
+
+										<div class="recent-post-content-item">
+											<img src="img/recent_post/1.jpg" alt="">
+											<div class="recent-post-content-item-description">
+												<a href="blog-1.html">
+													<h3>Our team in international competitions</h3>
+												</a>
+												<p>There are many variations of 
+												passages of Lorem Ipsum available, 
+												but the majority have suffered 
+												alteration [...]</p>
+												<a href="#">Read more <i class="fa fa-angle-right"></i></a>
+												<a class="comment"><i class="fa fa-comments"></i> 3</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="recent-post-item">
+										<div class="recent-post-item-header">
+											<h2 class="recent-post-date">
+												15<sup>April</sup>
+												<sub>2017</sub>
+											</h2>
+										</div>
+										<div class="recent-post-content-item">
+											<img src="img/recent_post/2.jpg" alt="">
+											<div class="recent-post-content-item-description">
+												<a href="blog-1.html"><h3>Private lessons at home</h3></a>
+												<p>There are many variations of 
+												passages of Lorem Ipsum available, 
+												but the majority have suffered 
+												alteration [...]</p>
+												<a href="#">Read more <i class="fa fa-angle-right"></i></a>
+												<a class="comment"><i class="fa fa-comments"></i> 7</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="recent-post-item">
+										<div class="recent-post-item-header">
+											<h2 class="recent-post-date">
+												10<sup>April</sup>
+												<sub>2017</sub>
+											</h2>
+										</div>
+										<div class="recent-post-content-item">
+											<img src="img/recent_post/3.jpg" alt="">
+											<div class="recent-post-content-item-description">
+												<a href="blog-1.html"><h3>Fresh air helps maintain good physical preparation</h3></a>
+												<p>There are many variations of 
+												passages of Lorem Ipsum available, 
+												but the majority have suffered 
+												alteration [...]</p>
+												<a href="#">Read more <i class="fa fa-angle-right"></i></a>
+												<a  class="comment"><i class="fa fa-comments"></i> 15</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="recent-post-item">
+										<div class="recent-post-item-header">
+											<h2 class="recent-post-date">
+												28<sup>March</sup>
+												<sub>2017</sub>
+											</h2>
+										</div>
+										<div class="recent-post-content-item recent-post-content-item-img">
+											<img src="img/recent_post/4.jpg" alt="" >
+											<a href="#" class="comment"><i class="fa fa-comments"></i> 43</a>
+										</div>
+									</div>
+
+									<div class="recent-post-item">
+										<div class="recent-post-item-header">
+											<h2 class="recent-post-date">
+												17<sup>March</sup>
+												<sub>2017</sub>
+											</h2>
+										</div>
+										<div class="recent-post-content-item">
+											<img src="img/recent_post/1.jpg" alt="">
+											<div class="recent-post-content-item-description">
+												<a href="blog-1.html"><h3>Our team in international competitions</h3></a>
+												<p>There are many variations of 
+												passages of Lorem Ipsum available, 
+												but the majority have suffered 
+												alteration [...]</p>
+												<a href="#">Read more <i class="fa fa-angle-right"></i></a>
+												<a class="comment"><i class="fa fa-comments"></i> 24</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="recent-post-item">
+										<div class="recent-post-item-header">
+											<h2 class="recent-post-date">
+												12<sup>March</sup>
+												<sub>2017</sub>
+											</h2>
+										</div>
+										<div class="recent-post-content-item">
+											<img src="img/recent_post/2.jpg" alt="">
+											<div class="recent-post-content-item-description">
+												<a href="blog-1.html"><h3>Private lessons at home</h3></a>
+												<p>There are many variations of 
+												passages of Lorem Ipsum available, 
+												but the majority have suffered 
+												alteration [...]</p>
+												<a href="#">Read more <i class="fa fa-angle-right"></i></a>
+												<a class="comment"><i class="fa fa-comments"></i> 13</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="recent-post-item">
+										<div class="recent-post-item-header">
+											<h2 class="recent-post-date">
+												15<sup>February</sup>
+												<sub>2017</sub>
+											</h2>
+										</div>
+										<div class="recent-post-content-item">
+											<img src="img/recent_post/3.jpg" alt="">
+											<div class="recent-post-content-item-description">
+												<a href="blog-1.html"><h3>Fresh air helps maintain good physical preparation</h3></a>
+												<p>There are many variations of 
+												passages of Lorem Ipsum available, 
+												but the majority have suffered 
+												alteration [...]</p>
+												<a href="#">Read more <i class="fa fa-angle-right"></i></a>
+												<a class="comment"><i class="fa fa-comments"></i> 9</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="recent-post-item">
+										<div class="recent-post-item-header">
+											<h2 class="recent-post-date">
+												08<sup>February</sup>
+												<sub>2017</sub>
+											</h2>
+										</div>
+										<div class="recent-post-content-item recent-post-content-item-img">
+											<img src="img/recent_post/4.jpg" alt="" >
+											<a class="comment"><i class="fa fa-comments"></i> 64</a>
+										</div>
+
+							    	</div>
+
+							    </div><!-- and owl-demo-3 -->
+		
+							</div> <!-- and row -->
+						</div> <!-- and container -->
+					</div> <!-- and recent-post-content -->
+				</div> <!-- and recent-post -->
+				
+			</section>
+			<!-- About project -->
+			<section>
+				
+				<div class="about-project">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 col-xs-small our-servise-content">
+								
+								<div class="row">
+									<div class="col-md-12">
+										<h2>Training for competitions <span class="header-smaller">building a personal training</span></h2>
+									</div>
+								</div>
+
+								<div class="tabbable our-servise-content">
+									<!-- Nav tabs -->
+									<ul class="nav nav-tabs" role="tablist">
+									  	<li class="nav-item">
+									    	<a class="nav-link active" data-toggle="tab" href="#one" role="tab"><h5>Fitness</h5></a>
+									  	</li>
+									  	<li class="border">
+									    	<span>.</span>
+									  	</li>
+									  	<li class="nav-item">
+									    	<a class="nav-link" data-toggle="tab" href="#two" role="tab"><h5>Powerlifting</h5></a>
+									  	</li>
+									  	<li class="border">
+									    	<span>.</span>
+									  	</li>
+									  	<li class="nav-item">
+									    	<a class="nav-link" data-toggle="tab" href="#three" role="tab"><h5>Crossfit training</h5></a>
+									  	</li>
+									</ul>
+
+								  	<div class="tab-content">
+										<div class="tab-pane active" id="one" role="tabpanel">
+											<div class="row">
+												<div class="col-lg-6 col-md-12">
+													<div class="pane-img">
+														<img alt="" src="img/index/app-1.png">
+													</div>
+												</div>
+												<div class="pane col-lg-6 col-md-12">
+													<div class="pane-mobile-item-info">
+														<h4>Fitness training</h4>
+														<p>How to make SEO comfortable and simple for enyone?
+														There are many variations of passages of Lorem Ipsum available, but the 
+														majority have suffered alteration.</p>
+														<p>Code are many variations of passages Lorem Ipsum available, but SEO 
+														majority have suffered alteration. Social is a long established fact that a 
+														reader will be distracted by the readable content of a page when 
+														looking at its layout</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="tab-pane" id="two" role="tabpanel">
+											<div class="row">
+												<div class="col-md-4">
+													<div class="pane-mobile-item-info right">
+														<h4>Professional diet for powerlifting</h4>
+														<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+														<p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+													</div>
+												</div>
+												<div class="col-md-4">
+													<div class="pane-img-2"> <img alt="" src="img/index/app-2.png"></div>
+												</div>
+												<div class="col-md-4">
+													<div class="pane-mobile-item-info">
+														<h4>Running as a means of cardio training</h4>
+														<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+														<p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="tab-pane" id="three" role="tabpanel">
+											<div class="row">
+												<div class="col-md-4">
+													<div class="pane-img-2"> <img alt="" src="img/index/app-3.png"></div>
+												</div>
+
+												<div class="col-md-8">
+													<div class="pane-mobile-item-info">
+														<h4>Tere are many variations of passages</h4>
+														<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+														<p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+								   	</div>
+								</div>
+
+							</div> <!-- and our-service-content -->
+
+						</div> <!-- and row -->
+					</div> <!-- and container -->
+
+				</div> <!-- and about-project -->
+
+			</section> <!-- and About project -->
+
+			<section>
+				<div class="about-numbers">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<h2>Statistic <span class="header-smaller">most interesting facts in numbers</span></h2>
+							</div>
+							<div class="col-md-3 col-sm-6 col-12">
+								<div class="numbers-ico">
+									<h1>847</h1>
+									<h3 class="text-uppercase">simulators</h3>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6 col-12">
+								<div class="numbers-ico">
+									<h1>9853</h1>
+									<h3 class="text-uppercase">clients</h3>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6 col-12">
+								<div class="numbers-ico">
+									<h1>7</h1>
+									<h3 class="text-uppercase">years</h3>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6 col-12">
+								<div class="numbers-ico">
+									<h1>69</h1>
+									<h3 class="text-uppercase">sportsman</h3>
+								</div>
+							</div>
+							<div class="line col-sm-2 offset-sm-2 hidden-md-down">
+								<span></span>
+							</div>
+							<div class="line col-sm-2 offset-sm-1 hidden-md-down">
+								<span></span>
+							</div>
+							<div class="line col-sm-2 offset-sm-1 hidden-md-down">
+								<span></span>
+							</div>
+							<div class="col-md-12">
+								<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration. It is a long established fact that a reader will be distracted by the readable 
+								content of a page when looking at its layout.</p>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Featured project -->
+			<section>
+
+				<div class="featured-project-header">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<h2>Featured personal trainers <span>achieve results together</span></h2>
+							</div>
+						</div> <!-- and row -->
+					</div> <!-- and container -->
+				</div> <!-- and featured-project-header -->
+
+
+				<div class="featured-project-content cursor-move">
+
+		           <div id="owl-carousel" class="owl-carousel">
+		                <div class="item">
+		                	<div class="overaly"><div class="corner"></div>
+							
+							<a class="pluss c-pointer" href="img/featured-projects/port-sm-1.jpg" data-rel="prettyPhoto[gallery]"></a>
+		                	<h2><a href="">Olivia Newman</a></h2>
+		                	<p>sport dancing</p></div>
+		                	<img alt="" src="img/featured-projects/port-sm-1.jpg">
+		                </div>
+		                <div class="item">
+		                	<div class="overaly"><div class="corner"></div>
+		                	
+		                	<a class="pluss c-pointer" href="img/featured-projects/port-sm-2.jpg" data-rel="prettyPhoto[gallery]"></a>
+		                	<h2><a href="">Robert Mitchell</a></h2>
+		                	<p>running</p></div>
+		                    <img alt="" src="img/featured-projects/port-sm-2.jpg">
+		                </div>
+		                <div class="item">
+		                	<div class="overaly"><div class="corner"></div>
+		                	
+		                	<a class="pluss c-pointer" href="img/featured-projects/port-sm-3.jpg" data-rel="prettyPhoto[gallery]"></a>
+		                	<h2><a href="">Miriam Rivera</a></h2>
+		                	<p>tennis</p></div>
+		                	<img alt="" src="img/featured-projects/port-sm-3.jpg">
+		                </div>
+		                <div class="item">
+		                	<div class="overaly"><div class="corner"></div>
+		                	
+		                	<a class="pluss c-pointer" href="img/featured-projects/port-sm-4.jpg" data-rel="prettyPhoto[gallery]"></a>
+		                	<h2><a href="">Grace Lambert</a></h2>
+		                	<p>fitness</p></div>
+		                    <img alt="" src="img/featured-projects/port-sm-4.jpg">
+		                </div>
+		                <div class="item">
+		                	<div class="overaly"><div class="corner"></div>
+		                	
+		                	<a class="pluss c-pointer" href="img/featured-projects/port-sm-5.jpg" data-rel="prettyPhoto[gallery]"></a>
+		                	<h2><a href="">Clarckson and Jeny</a></h2>
+		                	<p>bodybuilding</p></div>
+		                	<img alt="" src="img/featured-projects/port-sm-5.jpg">
+		                </div>
+		                <div class="item">
+		                	<div class="overaly"><div class="corner"></div>
+							
+							<a class="pluss c-pointer" href="img/featured-projects/port-sm-1.jpg" data-rel="prettyPhoto[gallery]"></a>
+		                	<h2><a href="">Olivia Newman</a></h2>
+		                	<p>sport dancing</p></div>
+		                	<img alt="" src="img/featured-projects/port-sm-1.jpg">
+		                </div>
+		                <div class="item">
+		                	<div class="overaly"><div class="corner"></div>
+		                	
+		                	<a class="pluss c-pointer" href="img/featured-projects/port-sm-2.jpg" data-rel="prettyPhoto[gallery]"></a>
+		                	<h2><a href="">Robert Mitchell</a></h2>
+		                	<p>running</p></div>
+		                    <img alt="" src="img/featured-projects/port-sm-2.jpg">
+		                </div>
+		                <div class="item">
+		                	<div class="overaly"><div class="corner"></div>
+		                	
+		                	<a class="pluss c-pointer" href="img/featured-projects/port-sm-3.jpg" data-rel="prettyPhoto[gallery]"></a>
+		                	<h2><a href="">Miriam Rivera</a></h2>
+		                	<p>tennis</p></div>
+		                	<img alt="" src="img/featured-projects/port-sm-3.jpg">
+		                </div>
+		                <div class="item">
+		                	<div class="overaly"><div class="corner"></div>
+		                	
+		                	<a class="pluss c-pointer" href="img/featured-projects/port-sm-4.jpg" data-rel="prettyPhoto[gallery]"></a>
+		                	<h2><a href="">Grace Lambert</a></h2>
+		                	<p>fitness</p></div>
+		                    <img alt="" src="img/featured-projects/port-sm-4.jpg">
+		                </div>
+		                <div class="item">
+		                	<div class="overaly"><div class="corner"></div>
+		                	
+		                	<a class="pluss c-pointer" href="img/featured-projects/port-sm-5.jpg" data-rel="prettyPhoto[gallery]"></a>
+		                	<h2><a href="">Clarckson and Jeny</a></h2>
+		                	<p>bodybuilding</p></div>
+		                	<img alt="" src="img/featured-projects/port-sm-5.jpg">
+		                </div>
+		            </div>
+
+
+				</div> <!-- and featured-project-content -->
+				
+			</section> <!-- and Featured project -->
+
+			<section>
+				
+				<div>
+				<div class="container">
+					<div class="row">
+
+						<div class="col-md-12">
+
+							<h2>Testimonials <span>what people say</span></h2>
+
+							<div id="owl-demo-8" class="owl-carousel col-xs-small none cursor-move">
+							    
+							    <div class="people-quote">
+							    	 <div class="item-quote">
+										<p>There are many variations of passages of 
+										Lorem Ipsum available. <b>SEO</b> begin to work 
+										and it is very good idea to work with your 
+										company for us</p>
+									</div>
+									
+
+									<div class="people-av">
+										<div class="people-av-img">
+											<img src="img/avatar/te-1.jpg" alt="">
+										</div>
+										<h4>Janet September from ART</h4>
+										<p>designer</p>
+									</div>
+
+							    </div>
+
+							    <div class="people-quote">
+							    	 <div class="item-quote">
+										<p>SEO begin to work and it is very good idea 
+										to work with your company for usThere 
+										are many variations of passages of Lorem 
+										Ipsum available</p>
+									</div>
+									
+
+									<div class="people-av">
+										<div class="people-av-img">
+											<img src="img/avatar/te-2.jpg" alt="">
+										</div>
+										<h4>April John</h4>
+										<p>ART director La-Path inc</p>
+									</div>
+
+							    </div>
+
+							    <div class="people-quote">
+							    	 <div class="item-quote">
+										<p>Code are many variations of passages 
+										Lorem Ipsum available, but SEO majority 
+										have suffered alteration. Social is a long 
+										established fact</p>
+									</div>
+									
+
+									<div class="people-av">
+										<div class="people-av-img">
+											<img src="img/avatar/te-3.jpg" alt="">
+										</div>
+										<h4>ART director La-Path inc</h4>
+										<p>designer</p>
+									</div>
+
+							    </div>
+
+							    <div class="people-quote">
+							    	 <div class="item-quote">
+										<p>There are many variations of passages of 
+										Lorem Ipsum available. <b>SEO</b> begin to work 
+										and it is very good idea to work with your 
+										company for us</p>
+									</div>
+									
+
+									<div class="people-av">
+										<div class="people-av-img">
+											<img src="img/avatar/te-1.jpg" alt="">
+										</div>
+										<h4>Janet September from ART</h4>
+										<p>designer</p>
+									</div>
+
+							    </div>
+
+						    </div>
+
+					    </div>
+
+					</div> <!-- and row -->
+				</div> <!-- and container -->
+				</div> <!-- and relaited-products -->
+
+			</section>
+
+			<section>
+				
+
+				<div class="container">
+					<div class="row">
+
+						<div class="col-md-12">
+
+							<h2>Our corporate clients <span>business we help to feel good</span></h2>
+
+							<div id="owl-demo-2" class="owl-carousel col-xs-small none cursor-move">
+							    
+							    <div class="client">
+
+							    	<img alt="" src="img/index/logo-1.png">
+
+								</div>
+								<div class="client">
+
+							    	<img alt="" src="img/index/logo-2.png">
+
+								</div> 
+								<div class="client">
+
+							    	<img alt="" src="img/index/logo-3.png">
+
+								</div>
+								<div class="client">
+
+							    	<img alt="" src="img/index/logo-4.png">
+
+								</div>
+								<div class="client">
+
+							    	<img alt="" src="img/index/logo-5.png">
+
+								</div> 
+								<div class="client">
+
+							    	<img alt="" src="img/index/logo-6.png">
+
+								</div>   
+								<div class="client">
+
+							    	<img alt="" src="img/index/logo-7.png">
+
+								</div> 
+								<div class="client">
+
+							    	<img alt="" src="img/index/logo-8.png">
+
+								</div>   
+
+						    </div>
+
+					    </div>
+
+					</div> <!-- and row -->
+				</div> <!-- and container -->
+
+			</section>
+
+		</div><!-- and index-4 -->
+
+		<footer id="footer">
+			
+			<div class="footer">
+				<div class="container">
+					<div class="row">
+						
+						<div class="col-lg-6 col-sm-12 col-xs-12">
+							<img alt="Logo" class="logo-small" src="img/logo_small.png">
+							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+							<ul class="social-small list-inline">
+								<li class="list-inline-item ">
+									<a href="#">
+										<i class="fa fa-facebook"></i>
+									</a>
+								</li>
+								<li class="list-inline-item">
+									<a href="#">
+										<i class="fa fa-pinterest"></i>
+									</a>
+								</li>
+								<li class="list-inline-item">
+									<a href="#">
+										<i class="fa fa-google-plus"></i>
+									</a>
+								</li>
+								<li class="list-inline-item">
+									<a href="#">
+										<i class="fa fa-dribbble"></i>
+									</a>
+								</li>
+								<li class="list-inline-item">
+									<a href="#">
+										<i class="fa fa-linkedin"></i>
+									</a>
+								</li>
+								<li class="list-inline-item">
+									<a href="#">
+										<i class="fa fa-twitter"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="col-lg-3 col-sm-6 col-xs-12 latest-posts">
+							<h3 class="text-sm-left text-xs-center">Latest posts</h3>
+							<ul class="list-unstyled">
+								<li>
+									<a href="blog-1.html" class="c-pointer">Some design blog post</a>
+									<p>14 May 2017</p>
+								</li>
+								<li>
+									<a href="blog-1.html" class="c-pointer">WordPress code for responsive</a>
+									<p>2 May 2017</p>
+								</li>
+								<li>
+									<a href="blog-1.html" class="c-pointer">Creative technologies of our time</a>
+									<p>29 April 2017</p>
+								</li>
+								<li>
+									<a href="blog-1.html" class="c-pointer">Time for your site</a>
+									<p>17 April 2017</p>
+								</li>
+							</ul>
+						</div><!-- and latest-posts -->
+
+						<div class="col-lg-3 col-sm-6 col-xs-12 footer-contact">
+							<h3 class="text-sm-left text-xs-center">Contact</h3>
+							
+							<p>Some Street Str, Lviv city</p>
+							<table>
+								<tr>
+							      	<td>
+							      		<p><b>Box:</b></p>
+									</td>
+							      	<td>
+							      		<p>32145</p>
+									</td>
+							    </tr>
+							    <tr>
+							      	<td>
+							      		<p><b>Phone:</b></p>
+									</td>
+							      	<td>
+							      		<p>+38 (321) 65498732</p>
+									</td>
+							    </tr>
+							    <tr>
+							      	<td>
+							      		<p><b>Fax:</b></p>
+									</td>
+							      	<td>
+							      		<p>+38 (321) 65498732</p>
+									</td>
+							    </tr>
+							</table>
+							<h3 class="newsletter text-sm-left text-xs-center">Newsletter</h3>
+							<div class="input-group">
+							    <input type="text" class="form-control" placeholder="Enter your e-mail address">
+							    <span class="input-group-btn">
+							        <button class="btn btn-secondary text-uppercase" type="button">Go</button>
+							    </span>
+						    </div>
+							<p>By subscribing you will get the latest news from us.</p>
+						</div> <!-- and footer-contact -->
+
+					</div> <!-- and row -->
+				</div> <!-- and container -->
+			</div> <!-- and footer -->
+
+		</footer> <!-- and footer -->
+		
+		<!-- Bottom bar -->
+		<section>
+			<div class="bottom-bar">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 col-md-12  text-md-center text-lg-left flex-md-last flex-lg-first text-xs-center">
+							<p>&#169; 2017 FitLife. All Rights Reserved by <a href="https://themeforest.net/user/codeanddesign">CodeAandDesign</a></p>
+						</div>
+
+						<div class="col-lg-6 col-md-12 text-md-center text-lg-right flex-md-first flex-lg-last text-xs-center">
+							<ul class="list-inline">
+								<li class="list-inline-item"><a href="index-1.html">HOME</a></li>
+								<li class="list-inline-item"><a href="blog.html">OUR BLOG</a></li>
+								<li class="list-inline-item"><a href="shop-1.html">SHOP</a></li>
+								<li class="list-inline-item"><a href="#">TERMS</a></li>
+								<li class="list-inline-item"><a href="contact.html">CONTACTS</a></li>
+							</ul>
+						</div>					
+					</div>
+				</div> <!-- and container-fluid -->
+			</div> <!-- and bottom-bar -->
+		</section> <!-- and section -->
+
+		<a href="#" class="back-to-top"></a>
+
+	</div> <!-- and wrap -->
+
+  	<!-- Modernizr -->
+	<script src="js/modernizr-custom.js"></script>
+
+	<!-- jQuery -->
+	<script src="js/jquery-1.12.4.min.js"></script>
+
+	<!-- Page preloader -->
+	<script>
+		$(window).on('load', function () {
+		    var $preloader = $('#page-preloader'),
+		        $spinner   = $preloader.find('.spinner');
+		    $spinner.fadeOut();
+		    $preloader.delay(350).fadeOut('slow');
+		});
+	</script>
+
+	<!-- Owl carousel -->
+    <script src="js/owl.carousel.min.js"></script>
+
+	<!--  Tether  -->
+    <script src="js/tether.min.js"></script>
+
+	<!-- Bootstrap Plagins -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- Bootstrap select -->
+	<script src="js/bootstrap-select.min.js"></script>
+
+	<!-- Bootstrap Hover JavaScript -->
+  	<script src="js/bootstrap-hover-dropdown.min.js"></script>
+
+	<!-- Animation offset -->
+	<script src="js/wow.min.js"></script>
+
+	<!-- Price slider range -->
+	<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+	<!-- and Price slider range -->
+
+	<!-- BX Slider -->
+	<script src="js/jquery.bxslider.min.js"></script>
+	
+	<!-- Isotope -->
+	<script src="js/isotope.pkgd.min.js"></script>
+
+	<!--Preaty Photo-->
+	<script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+	
+	<!-- Other scripts -->
+	<script type="text/javascript" src="js/script.js"></script>
+
+	<!-- Switcher -->
+	<script type="text/javascript" src="js/switcher.js"></script>
+
+	<!-- Layout Style -->
+	<script src="js/layout.js"></script>
+
+	<!-- login -->
+	<script src="js/index.js"></script>
+
+	<!-- BX Slider launch -->
+	<script>
+
+		$(document).ready(function(){
+			$('#shop-slider1').bxSlider({
+			      pagerCustom: '#shop-slider-pager1'
+			    });
+		});
+
+		$(document).ready(function(){
+			$('#shop-slider1').bxSlider({
+		      pagerCustom: '#shop-slider-pager1'
+		    });
+		});
+
+		$(document).ready(function(){
+			$('#shop-slider4').bxSlider({
+		      pagerCustom: '#shop-slider-pager4'
+		    });
+		});
+
+		$(document).ready(function(){
+			$('#shop-slider7').bxSlider({
+		      pagerCustom: '#shop-slider-pager7'
+		    });
+		});
+
+		$(document).ready(function(){
+			$('#shop-slider9').bxSlider({
+				pagerCustom: '#shop-slider-pager9'
+			});
+		});
+
+	</script>
+	<!-- and BX Slider launch -->
+
+	<!-- Select box -->
+	<script type="text/javascript" src="js/jquery.selectbox-0.2.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("#color-select").selectbox();
+	});
+	</script>
+
+	<!-- Parallax -->
+	<script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.about-numbers').parallax("100%", 0.25);
+			$('.callout-2').parallax("20%", 0.25);
+		});
+	</script>
+
+	<!-- SLIDER REVOLUTION 5.x SCRIPTS  -->
+    <script type="text/javascript" src="js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script>
+
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  -->  
+	<script type="text/javascript" src="js/extensions/revolution.extension.video.min.js"></script>
+	<script type="text/javascript" src="js/extensions/revolution.extension.actions.min.js"></script>
+	<script type="text/javascript" src="js/extensions/revolution.extension.kenburn.min.js"></script>
+	<script type="text/javascript" src="js/extensions/revolution.extension.migration.min.js"></script>
+	<script type="text/javascript" src="js/extensions/revolution.extension.parallax.min.js"></script>
+	<script type="text/javascript" src="js/extensions/revolution.extension.slideanims.min.js"></script>
+	<script type="text/javascript" src="js/extensions/revolution.extension.layeranimation.min.js"></script>
+	<script type="text/javascript" src="js/extensions/revolution.extension.navigation.min.js"></script>
+	<script type="text/javascript" src="js/extensions/revolution.extension.carousel.min.js"></script>
+
+    <!-- REVOLUTION SLIDER -->
+	<script type="text/javascript">
+		// SLIDER REVOLUTION LAUNCH 
+		var revapi;
+
+		  revapi = jQuery(".tp-banner").show().revolution({
+		    sliderLayout:"fullScreen",
+            delay:15000,
+            gridheight:588,
+            disableProgressBar: "on",
+            fullScreenOffsetContainer: ".top-bar",
+		    navigation: {
+		      arrows:{enable:true},
+		      keyboardNavigation:"on",
+		      onHoverStop:"on",
+		      touch:{
+		        touchenabled:"on",
+		        swipe_threshold: 75,
+		        swipe_min_touches: 1,
+		        swipe_direction: "horizontal",
+		        drag_block_vertical: false
+		      }       
+		    }   
+		  });
+	// and SLIDER REVOLUTION LAUNCH
+	</script>
+	<!-- END REVOLUTION SLIDER -->
+
+
+</body>
+</html>
